@@ -10,8 +10,6 @@ import cn from './locale/cn';
 import en from './locale/en';
 
 const messages = {
-
-
   'en-us': en,
   'zh-cn': cn,
 };
