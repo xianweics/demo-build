@@ -5,6 +5,6 @@ describe('test Home', () => {
   it('init render', () => {
     const { baseElement } = render(intlWrapper(<Home />));
     const wrapper = baseElement.querySelectorAll('div');
-    expect(wrapper[0].innerHTML).toBe('Home');
+    expect(wrapper[0].innerHTML).toBe('Home1');
   });
 });

@@ -7,8 +7,9 @@
     "eslint:fix": "eslint . --fix",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "test:coverage": "node scripts/test.js --coverage"
+    "test:watch": "node scripts/test.js",
+    "test": "node scripts/test.js --watchAll=false",
+    "test:coverage": "npm run test -- --coverage"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
