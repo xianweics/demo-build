@@ -6,15 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { RecoilRoot } from 'recoil';
 import { BrowserRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
-import cn from './locale/cn';
-import en from './locale/en';
+import { messages, defaultLocale } from './locale/intl';
 
-const messages = {
-  'en-us': en,
-  'zh-cn': cn,
-};
-const locale = 'zh-cn';
-const defaultLocale = 'zh-cn';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -22,8 +15,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <IntlProvider
-      messages={messages[locale]}
-      locale={locale}
+      messages={messages[defaultLocale]}
+      locale={defaultLocale}
       defaultLocale={defaultLocale}
     >
       <RecoilRoot>

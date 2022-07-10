@@ -1,5 +1,5 @@
 {
-  "name": "ugc",
+  "name": "demo-build",
   "version": "0.1.0",
   "scripts": {
     "prepare": "husky install",
@@ -7,7 +7,8 @@
     "eslint:fix": "eslint . --fix",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "test:coverage": "node scripts/test.js --coverage"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
@@ -128,7 +129,8 @@
     ],
     "modulePaths": [],
     "moduleNameMapper": {
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+      "^src/(.*)$": "<rootDir>/src/$1"
     },
     "moduleFileExtensions": [
       "web.js",
